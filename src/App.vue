@@ -10,6 +10,13 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  
+  <!-- RouterLinks does not refresh the page, using an <a> tag refreshes the page -->
+  <RouterLink to="/">Home</RouterLink> | 
+  <RouterLink to="/about">About</RouterLink>
+  
+  <!-- Required to render the right page/component when user visits specific paths -->
+  <RouterView></RouterView>
 </template>
 
 <style scoped>
