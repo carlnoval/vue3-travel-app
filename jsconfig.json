@@ -1,0 +1,18 @@
+// Make vscode know more and be smart about the codebase
+
+{
+  // tells vscode that this is the source of the project and
+  // that it shoudl concern its intelliSense decisions only with
+  // the files in this directory in addition to node_modules
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    // the baseURL option informs vscode where the base directory to resolve non-relative module names is
+    "baseUrl": ".",
+    // the paths option makes it so that vscode can use intelliSense when we're importing modules using the @ symbol alias
+    "paths": {
+      "@/*": ["./src/*"],
+    }
+  }
+}
